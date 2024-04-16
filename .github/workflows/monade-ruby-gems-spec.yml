@@ -1,5 +1,6 @@
-name: Ruby Gems Tests Workflow
+name: Ruby Gems Spec Workflow
 on:
+  workflow_call:
   push:
   pull_request:
   schedule:
