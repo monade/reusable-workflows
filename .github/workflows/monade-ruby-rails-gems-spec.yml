@@ -1,4 +1,4 @@
-name: Ruby Gems Spec Workflow
+name: Ruby - Rails Gems Spec Workflow
 on:
   workflow_call:
   schedule:
@@ -10,7 +10,10 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         ruby: [3.1, 3.2, 3.3, head, truffleruby, truffleruby-head]
+        rails: ['~> 6.1.0', '~> 7.0.0', '>= 0']
     runs-on: ${{ matrix.os }}
+    env:
+      CI_RAILS_VERSION: ${{ matrix.rails }}
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
