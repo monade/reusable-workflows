@@ -1,8 +1,6 @@
 name: Ruby - Rails Gems Spec Workflow
 on:
   workflow_call:
-  schedule:
-    - cron: '0 0 * * *'
 jobs:
   test:
     strategy:
