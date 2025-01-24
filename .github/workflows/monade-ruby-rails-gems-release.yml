@@ -2,6 +2,9 @@ name: Ruby Gem
 
 on:
   workflow_call:
+    secrets:
+      RUBYGEMS_AUTH_TOKEN:
+        required: true
 jobs:
   build:
     name: Build + Publish
