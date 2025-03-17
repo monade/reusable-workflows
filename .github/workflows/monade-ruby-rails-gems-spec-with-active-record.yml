@@ -27,6 +27,7 @@ jobs:
       postgres:
         image: postgres:latest
         env:
+          DB_NAME: rails_db_tests
           POSTGRES_DB: rails_db_tests
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: postgres
