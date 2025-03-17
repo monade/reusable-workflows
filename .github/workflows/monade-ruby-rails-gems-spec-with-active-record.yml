@@ -23,6 +23,7 @@ jobs:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       DB_HOST: '127.0.0.1'
+      DB_NAME: rails_db_tests
     services:
       postgres:
         image: postgres:latest
@@ -41,7 +42,6 @@ jobs:
       mysql:
         image: mysql:8
         env:
-          DB_NAME: rails_db_tests
           MYSQL_ALLOW_EMPTY_PASSWORD: true
         ports: ['3306:3306']
         options: >-
